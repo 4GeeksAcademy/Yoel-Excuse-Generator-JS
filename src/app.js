@@ -1,3 +1,6 @@
+import "bootstrap";
+import "./styles.css";
+
 window.onload = function() {
   document.querySelector("#excuse").innerHTML = excuseGenerator();
 };
