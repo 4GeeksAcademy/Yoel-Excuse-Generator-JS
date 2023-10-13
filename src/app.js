@@ -1,12 +1,15 @@
 import "bootstrap";
 import "./styles.css";
 
+//Function for apply the excuse generator when the site is loaded.
 window.onload = function() {
   document.querySelector("#excuse").innerHTML = excuseGenerator();
 };
+
+//Function for generate an excuse by selecting and combining values randomly.
 function excuseGenerator() {
   let finalExcuse = "";
-  let excuse = [
+  let excuses = [
     [
       "My dog ",
       "My cat ",
@@ -50,7 +53,7 @@ function excuseGenerator() {
       "to preserve the world's balance... Or so they say..."
     ]
   ];
-  for (let array of excuse) {
+  for (let array of excuses) {
     finalExcuse += array[Math.floor(Math.random() * array.length)];
   }
   return finalExcuse;
